@@ -38,6 +38,10 @@ var template = React.createElement(
   )
 );
 
+function getLocation() {
+  return 'Unknown';
+}
+
 var user = {
   name: 'Yadnyesh',
   age: 36,
@@ -65,12 +69,12 @@ var templateTwo = React.createElement(
     'p',
     null,
     ' Location: ',
-    user.location,
+    getLocation(),
     ' '
   )
 );
 
 var appRoot = document.getElementById('app');
 
-ReactDOM.render(template, appRoot);
+//ReactDOM.render(template, appRoot);
 ReactDOM.render(templateTwo, appRoot);
