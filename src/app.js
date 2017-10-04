@@ -18,8 +18,11 @@ var template = (
 </div>
 );
 
-function getLocation() {
-  return 'Unknown';
+function getLocation(location) {
+  if(location)
+    return location;
+  else
+    return 'Unknown';
 }
 
 var user = {
@@ -34,7 +37,7 @@ var templateTwo = (
   <div>
     <h1>{user.name.toUpperCase() + '!'}</h1>
     <p> Age: {user.age} </p>
-    <p> Location: {getLocation()} </p>
+    <p> Location: {getLocation(user.location)} </p>
   </div>
 );
 
