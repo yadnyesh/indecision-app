@@ -9,12 +9,26 @@ var template = React.createElement(
   React.createElement(
     'h1',
     null,
-    'Indecision App'
+    'Yadnyesh'
   ),
   React.createElement(
     'p',
     null,
-    'This is some info.'
+    'This is some info about Yadnyesh'
+  ),
+  React.createElement(
+    'ol',
+    null,
+    React.createElement(
+      'li',
+      null,
+      'Item One'
+    ),
+    React.createElement(
+      'li',
+      null,
+      'Item Two'
+    )
   )
 );
 var appRoot = document.getElementById('app');
