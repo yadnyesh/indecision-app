@@ -31,6 +31,27 @@ var template = React.createElement(
     )
   )
 );
+
+var templateTwo = React.createElement(
+  'div',
+  null,
+  React.createElement(
+    'h1',
+    null,
+    'Yadnyesh'
+  ),
+  React.createElement(
+    'p',
+    null,
+    ' Age: 36 '
+  ),
+  React.createElement(
+    'p',
+    null,
+    ' Location: Bangalore '
+  )
+);
+
 var appRoot = document.getElementById('app');
 
-ReactDOM.render(template, appRoot);
+ReactDOM.render(templateTwo, appRoot);
