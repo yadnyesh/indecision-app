@@ -1,10 +1,21 @@
 'use strict';
 
+console.log('App.js is running');
+
 //JSX - JavaScript XML
 var template = React.createElement(
-  'p',
+  'div',
   null,
-  'Does this change?'
+  React.createElement(
+    'h1',
+    null,
+    'Indecision App'
+  ),
+  React.createElement(
+    'p',
+    null,
+    'This is some info.'
+  )
 );
 var appRoot = document.getElementById('app');
 
