@@ -32,13 +32,14 @@ var template = React.createElement(
   )
 );
 
+var userName = "Juvekar";
 var templateTwo = React.createElement(
   'div',
   null,
   React.createElement(
     'h1',
     null,
-    'Yadnyesh'
+    userName
   ),
   React.createElement(
     'p',
