@@ -20,24 +20,22 @@ var template = (
 
 function getLocation(location) {
   if(location)
-    return location;
-  else
-    return 'Unknown';
+    return <p>Location: {location}</p>;
 }
 
 var user = {
   name: 'Yadnyesh',
-  age: 36,
+  age: 17,
   location: 'Goa'
 };
-var userName = "Juvekar";
-var userAge = 36;
-var userLocation = 'Goa';
+// var userName = "Juvekar";
+// var userAge = 36;
+// var userLocation = 'Goa';
 var templateTwo = (
   <div>
-    <h1>{user.name.toUpperCase() + '!'}</h1>
-    <p> Age: {user.age} </p>
-    <p> Location: {getLocation(user.location)} </p>
+    <h1>{user.name ? user.name : 'Anonymous' }</h1>
+    {(user.age && user.age >= 18) && <p> Age: {user.age} </p>}
+    {getLocation(user.location)}
   </div>
 );
 
