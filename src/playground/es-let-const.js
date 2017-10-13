@@ -7,3 +7,4 @@ console.log('Let ', nameLet);
 
 const nameConst = "Frank";
 console.log('Const ', nameConst);
+
