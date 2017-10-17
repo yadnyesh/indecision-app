@@ -34,7 +34,7 @@ var user = {
 var templateTwo = (
   <div>
     <h1>{user.name ? user.name : 'Anonymous' }</h1>
-    Age: {user.age}
+    {(user.age && user.age >= 18) && <p> Age: {user.age} </p>}
     {getLocation(user.location)}
   </div>
 );
