@@ -25,7 +25,7 @@ function getLocation(location) {
 
 var user = {
   name: 'Yadnyesh',
-  age: 17,
+  age: 36,
   location: 'Goa'
 };
 // var userName = "Juvekar";
@@ -34,7 +34,7 @@ var user = {
 var templateTwo = (
   <div>
     <h1>{user.name ? user.name : 'Anonymous' }</h1>
-    {(user.age && user.age >= 18) && <p> Age: {user.age} </p>}
+    Age: {user.age}
     {getLocation(user.location)}
   </div>
 );
