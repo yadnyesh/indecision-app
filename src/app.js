@@ -30,16 +30,8 @@ const user = {
   age: 36,
   location: 'Goa'
 };
-// var userName = "Juvekar";
-// var userAge = 36;
-// var userLocation = 'Goa';
-// const templateTwo = (
-//   <div>
-//     <h1>{user.name ? user.name : 'Anonymous' }</h1>
-//     {(user.age && user.age >= 18) && <p> Age: {user.age} </p>}
-//     {getLocation(user.location)}
-//   </div>
-// );
+
+const appRoot = document.getElementById('app');
 
 let count = 0;
 const someId = 'myidhere';
@@ -64,7 +56,7 @@ const resetCount = () => {
 
 
 
-const appRoot = document.getElementById('app');
+
 
 
 

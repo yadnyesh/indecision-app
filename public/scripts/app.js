@@ -58,16 +58,8 @@ var user = {
   age: 36,
   location: 'Goa'
 };
-// var userName = "Juvekar";
-// var userAge = 36;
-// var userLocation = 'Goa';
-// const templateTwo = (
-//   <div>
-//     <h1>{user.name ? user.name : 'Anonymous' }</h1>
-//     {(user.age && user.age >= 18) && <p> Age: {user.age} </p>}
-//     {getLocation(user.location)}
-//   </div>
-// );
+
+var appRoot = document.getElementById('app');
 
 var count = 0;
 var someId = 'myidhere';
@@ -89,8 +81,6 @@ var resetCount = function resetCount() {
   console.log('Count Reset');
   renderCounterApp();
 };
-
-var appRoot = document.getElementById('app');
 
 //console.log (templateTwo);
 
