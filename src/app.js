@@ -45,29 +45,45 @@ let count = 0;
 const someId = 'myidhere';
 
 const addOne = () => {
-  console.log('addOne');
+  count++;
+  console.log('addOne', count);
+  renderCounterApp();
 };
 
 const minusOne = () => {
+  count--;
   console.log('minusOne');
+  renderCounterApp();
 };
 
 const resetCount = () => {
+  count = 0;
   console.log('Count Reset');
+  renderCounterApp();
 };
 
-const templateTwo = (
-  <div>
-    <h1>Count: {count} </h1>
-    <button onClick={addOne}> +1</button>
-    <button onClick={minusOne}>Minus One</button>
-    <button onClick={resetCount}>Reset Count</button>
-  </div>
-);
+
 
 const appRoot = document.getElementById('app');
 
-//ReactDOM.render(template, appRoot);
+
+
+//console.log (templateTwo);
+
+const renderCounterApp = () => {
+
+  const templateTwo = (
+    <div>
+      <h1>Count: {count} </h1>
+      <button onClick={addOne}> +1</button>
+      <button onClick={minusOne}>-1</button>
+      <button onClick={resetCount}>Reset Count</button>
+    </div>
+  );
+
+  //ReactDOM.render(template, appRoot);
 ReactDOM.render(templateTwo, appRoot);
 
-console.log (templateTwo);
+};
+
+renderCounterApp();
