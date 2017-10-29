@@ -56,27 +56,21 @@ var render = function render() {
       null,
       app.options.length
     ),
-    numbers.map(function (number) {
-      return React.createElement(
-        'p',
-        { key: number },
-        'Number: ',
-        number
-      );
-    }),
+    React.createElement(
+      'button',
+      { onClick: clearOptions },
+      'Remove All'
+    ),
     React.createElement(
       'ol',
       null,
-      React.createElement(
-        'li',
-        null,
-        'Item One'
-      ),
-      React.createElement(
-        'li',
-        null,
-        'Item Two'
-      )
+      app.options.map(function (option) {
+        return React.createElement(
+          'li',
+          { key: option },
+          option
+        );
+      })
     ),
     React.createElement(
       'form',
@@ -86,11 +80,6 @@ var render = function render() {
         'button',
         null,
         'Add Option'
-      ),
-      React.createElement(
-        'button',
-        { onClick: clearOptions },
-        'Remove All'
       )
     )
   );
