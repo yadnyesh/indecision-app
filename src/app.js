@@ -2,15 +2,17 @@ console.log('App.js is running')
 
 //JSX - JavaScript XML
 
-var htmlElements = {
+var app = {
   title : 'Yadnyesh',
-  subtitle : 'This is some info about Yadnyesh'
+  subtitle : 'This is some info about Yadnyesh',
+  options: ['One', 'Two']
 };
 
 var template = (
 <div>
-  <h1>{htmlElements.title}</h1>
-  <p>{htmlElements.subtitle}</p>
+  <h1>{app.title}</h1>
+  {app.subtitle && <p>{app.subtitle}</p>}
+  <p>{app.options.length> 0 ? 'Here are your options ' : 'No Options'}</p>
   <ol>
     <li>Item One</li>
     <li>Item Two</li>
@@ -42,4 +44,4 @@ var templateTwo = (
 var appRoot = document.getElementById('app');
 
 //ReactDOM.render(template, appRoot);
-ReactDOM.render(templateTwo, appRoot);
+ReactDOM.render(template, appRoot);
