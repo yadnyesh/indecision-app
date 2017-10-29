@@ -5,20 +5,18 @@ var add = function add(a, b) {
   return a + b;
 };
 
-console.log(add(55, 1));
+//console.log(add(55,1));
 
 var user = {
   name: 'Yadnyesh',
   cities: ['Mumbai', 'Marcela', 'Panaji', 'Vasco', 'Margao', 'Bangalore'],
   printPlacesLived: function printPlacesLived() {
-    console.log(this.name);
-    console.log(this.cities);
-    self = this;
 
-    this.cities.forEach(function (city) {
-      console.log(self.name + ' has lived in ' + city);
+    var cityMessages = this.cities.map(function (city) {
+      return city + '!';
     });
+    return cityMessages;
   }
 };
 
-user.printPlacesLived();
+console.log(user.printPlacesLived());

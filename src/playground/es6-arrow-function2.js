@@ -3,21 +3,18 @@ const add = function(a,b) {
   return a + b;
 };
 
-console.log(add(55,1));
+//console.log(add(55,1));
 
 const user = {
   name : 'Yadnyesh',
   cities : ['Mumbai', 'Marcela', 'Panaji', 'Vasco', 'Margao', 'Bangalore'],
-  printPlacesLived : function () {
-    console.log(this.name);
-    console.log(this.cities);
-    self = this;
+  printPlacesLived() {
 
-    this.cities.forEach(function(city){
-      console.log (self.name + ' has lived in ' + city);
-    });
-
+      const cityMessages = this.cities.map((city) => {
+        return city + '!';
+      });
+      return cityMessages;
   }
-}
+};
 
-user.printPlacesLived();
+console.log(user.printPlacesLived());
