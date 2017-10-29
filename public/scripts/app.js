@@ -56,23 +56,14 @@ var render = function render() {
       null,
       app.options.length
     ),
-    [React.createElement(
-      'p',
-      { key: '1' },
-      'a'
-    ), React.createElement(
-      'p',
-      { key: '2' },
-      'b'
-    ), React.createElement(
-      'p',
-      { key: '3' },
-      'c'
-    ), React.createElement(
-      'p',
-      { key: '4' },
-      'd'
-    )],
+    numbers.map(function (number) {
+      return React.createElement(
+        'p',
+        { key: number },
+        'Number: ',
+        number
+      );
+    }),
     React.createElement(
       'ol',
       null,
