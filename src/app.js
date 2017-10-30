@@ -27,6 +27,11 @@ const clearOptions = () => {
   render();
 };
 
+const onMakeDecision = () => {
+  const random = Math.floor(Math.random() * app.options.length);
+  console.log(random);
+};
+
 const appRoot = document.getElementById('app');
 
 const numbers = [55, 101, 1000];
@@ -37,7 +42,7 @@ const render = () => {
       <h1>{app.title}</h1>
       {app.subtitle && <p>{app.subtitle}</p>}
       <p>{app.options.length> 0 ? 'Here are your options ' : 'No Options'}</p>
-      <p>{app.options.length}</p>
+      <button onClick={onMakeDecision}>What Should I do?</button>
       <button onClick={clearOptions}>Remove All</button>
       <ol>
         {

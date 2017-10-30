@@ -28,6 +28,11 @@ var clearOptions = function clearOptions() {
   render();
 };
 
+var onMakeDecision = function onMakeDecision() {
+  var random = Math.floor(Math.random() * app.options.length);
+  console.log(random);
+};
+
 var appRoot = document.getElementById('app');
 
 var numbers = [55, 101, 1000];
@@ -52,9 +57,9 @@ var render = function render() {
       app.options.length > 0 ? 'Here are your options ' : 'No Options'
     ),
     React.createElement(
-      'p',
-      null,
-      app.options.length
+      'button',
+      { onClick: onMakeDecision },
+      'What Should I do?'
     ),
     React.createElement(
       'button',
