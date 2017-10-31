@@ -13,7 +13,7 @@ const render = () => {
   const template = (
     <div>
       <h1>Visibility Toggle</h1>
-      <button onClick={toggleText}>Show Details</button>
+      <button onClick={toggleText}>{showText ? 'Hide Details' : 'Show Details'}</button>
       <p> {showText ? 'Hey! You can see some details now' : ''} </p>
       {console.log(showText)}
     </div>
@@ -21,17 +21,5 @@ const render = () => {
 
   ReactDOM.render(template, appRoot);
 }
-
-
-
-
-
-
-
-
-
-
-
-
 
 render();

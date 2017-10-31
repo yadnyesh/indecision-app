@@ -23,7 +23,7 @@ var render = function render() {
     React.createElement(
       'button',
       { onClick: toggleText },
-      'Show Details'
+      showText ? 'Hide Details' : 'Show Details'
     ),
     React.createElement(
       'p',
