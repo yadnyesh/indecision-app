@@ -5,7 +5,8 @@ class Person {
   }
 
   getGreeting(){
-    return 'Hi, I am ' + this.name + '!';
+    //return 'Hi, I am ' + `${this.name}` + '!';
+    return `Hi, I am ${this.name}!`;
   }
 
 }
