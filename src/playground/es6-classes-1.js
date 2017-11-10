@@ -31,12 +31,31 @@ class Student extends Person {
     if(this.hasMajor()) {
       description += ` The major is ${this.major}.`;
     }
-
     return description;
   }
 
 }
 
-const me = new Student('Yadnyesh', 36, 'Computer Science');
-console.log(me, "\n");
-console.log(me.getDescription());
+class Traveller extends Person {
+  constructor(name, age, homeLocation) {
+    super(name, age, homeLocation);
+    this.homeLocation = homeLocation;
+  }
+
+  hasHomeLocation() {
+    return !!this.homeLocation;
+  }
+
+  getGreeting(){
+    let greeting = super.getGreeting();
+    if(this.hasHomeLocation()) {
+      greeting += ` I am from ${this.homeLocation}`;
+    }
+    return greeting;
+  }
+}
+
+const me = new Traveller('Yadnyesh', 36, 'Goa');
+//console.log(me, "\n");
+//console.log(me.getDescription());
+console.log(me.getGreeting());
