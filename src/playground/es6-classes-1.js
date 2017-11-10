@@ -1,7 +1,6 @@
 class Person {
   constructor (name = 'Anonymous') {
     this.name = name;
-    console.log('Test')
   }
 
   getGreeting(){
@@ -13,3 +12,6 @@ class Person {
 
 const me = new Person('Yadnyesh');
 console.log(me.getGreeting());
+
+const other = new Person();
+console.log(other.getGreeting());

@@ -11,7 +11,6 @@ var Person = function () {
     _classCallCheck(this, Person);
 
     this.name = name;
-    console.log('Test');
   }
 
   _createClass(Person, [{
@@ -27,3 +26,6 @@ var Person = function () {
 
 var me = new Person('Yadnyesh');
 console.log(me.getGreeting());
+
+var other = new Person();
+console.log(other.getGreeting());
