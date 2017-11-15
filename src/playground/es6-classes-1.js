@@ -5,8 +5,7 @@ class Person {
   }
 
   getGreeting(){
-    //return 'Hi, I am ' + `${this.name}` + '!';
-    return `Hi, I am ${this.name} and my age is ${this.age}!`;
+        return `Hi, I am ${this.name} and my age is ${this.age}!`;
   }
 
   getDescription() {
