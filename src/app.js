@@ -38,6 +38,17 @@ class Options extends React.Component {
     return (
       <div>
         Options component here
+        <Option />
+      </div>
+    );
+  }
+}
+
+class Option extends React.Component {
+  render() {
+    return(
+      <div>
+        Option Component here
       </div>
     );
   }
@@ -59,4 +70,4 @@ const jsx = (
   </div>
 );
 
-ReactDOM.render(jsx, document.getElementById('app'));
+ReactDOM.render(<IndecisionApp />, document.getElementById('app'));
