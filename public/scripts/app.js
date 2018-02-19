@@ -22,7 +22,7 @@ var IndecisionApp = function (_React$Component) {
     value: function render() {
       var title = 'Indecision';
       var subTitle = 'Put your life in the hands of a computer';
-      var options = ['String One', 'String Two', 'String Three'];
+      var options = ['String One', 'String Two', 'String Three', 'String Four', 'String Five'];
       return React.createElement(
         'div',
         null,

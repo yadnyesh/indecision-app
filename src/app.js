@@ -2,7 +2,7 @@ class IndecisionApp extends React.Component {
   render() {
     const title = 'Indecision';
     const subTitle = 'Put your life in the hands of a computer';
-    const options = ['String One', 'String Two', 'String Three'];
+    const options = ['String One', 'String Two', 'String Three', 'String Four', 'String Five'];
     return (
       <div>
         <Header title={title} subTitle={subTitle} />
