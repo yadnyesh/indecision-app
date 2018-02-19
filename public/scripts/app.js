@@ -173,11 +173,7 @@ var AddOption = function (_React$Component6) {
   _createClass(AddOption, [{
     key: 'render',
     value: function render() {
-      return React.createElement(
-        'div',
-        null,
-        'AddOption component here'
-      );
+      return React.createElement('div', null);
     }
   }]);
 
