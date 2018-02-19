@@ -53,7 +53,7 @@ class Option extends React.Component {
   render() {
     return(
       <div>
-        {this.props.optionText}
+        Option: {this.props.optionText}
       </div>
     );
   }
