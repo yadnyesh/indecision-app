@@ -173,7 +173,20 @@ var AddOption = function (_React$Component6) {
   _createClass(AddOption, [{
     key: 'render',
     value: function render() {
-      return React.createElement('div', null);
+      return React.createElement(
+        'div',
+        null,
+        React.createElement(
+          'form',
+          null,
+          React.createElement('input', { type: 'text', name: 'option' }),
+          React.createElement(
+            'button',
+            null,
+            'Add Option'
+          )
+        )
+      );
     }
   }]);
 

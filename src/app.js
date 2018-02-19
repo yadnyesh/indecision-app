@@ -69,7 +69,10 @@ class AddOption extends React.Component {
   render () {
     return (
       <div>
-
+        <form>
+          <input type="text" name="option" />
+          <button>Add Option</button>
+        </form>
       </div>
     );
   }
