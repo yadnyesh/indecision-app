@@ -123,13 +123,17 @@ var Options = function (_React$Component4) {
         'div',
         null,
         React.createElement(
-          'button',
-          { onClick: this.handleRemoveAll },
-          'Remove All'
-        ),
-        this.props.options.map(function (option) {
-          return React.createElement(Option, { key: option, optionText: option });
-        })
+          'form',
+          null,
+          React.createElement(
+            'button',
+            { onClick: this.handleRemoveAll },
+            'Remove All'
+          ),
+          this.props.options.map(function (option) {
+            return React.createElement(Option, { key: option, optionText: option });
+          })
+        )
       );
     }
   }]);
@@ -178,7 +182,7 @@ var AddOption = function (_React$Component6) {
         null,
         React.createElement(
           'form',
-          null,
+          { onSubmit: this.handleAddOption },
           React.createElement('input', { type: 'text', name: 'option' }),
           React.createElement(
             'button',
