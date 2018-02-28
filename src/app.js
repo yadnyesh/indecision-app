@@ -41,7 +41,8 @@ class Action extends React.Component {
 
 class Options extends React.Component {
   handleRemoveAll() {
-    alert('HandleRemoveAll');
+    console.log(this.props.options);
+    //alert('HandleRemoveAll');
   }
   render() {
     return (
