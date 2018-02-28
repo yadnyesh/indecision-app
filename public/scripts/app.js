@@ -15,6 +15,8 @@ var obj = {
   }
 };
 
+console.log(obj.getName());
+
 var IndecisionApp = function (_React$Component) {
   _inherits(IndecisionApp, _React$Component);
 
