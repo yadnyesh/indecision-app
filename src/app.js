@@ -5,7 +5,8 @@ const obj = {
   }
 }
 
-console.log(obj.getName());
+const getName = obj.getName.bind(obj);
+console.log(getName());
 
 class IndecisionApp extends React.Component {
   render() {
