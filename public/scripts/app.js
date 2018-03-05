@@ -29,9 +29,9 @@ var Counter = function (_React$Component) {
     key: 'handleAddOne',
     value: function handleAddOne() {
       console.log('Handle Add One Clicked...');
-      this.setState(function () {
+      this.setState(function (prevState) {
         return {
-          count: 1
+          count: prevState.count + 1
         };
       });
     }
