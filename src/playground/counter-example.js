@@ -19,4 +19,8 @@ handleMinusOne(){
   console.log('Handle Minus one ...button clicked');
 }
 
+handleReset(){
+  console.log('Handle Reset ..clicked');
+}
+
 ReactDOM.render(<Counter />, document.getElementById('app'));
