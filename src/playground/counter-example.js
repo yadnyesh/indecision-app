@@ -20,9 +20,20 @@ class Counter extends React.Component {
 
   handleMinusOne(){
     console.log('Handle Minus one ...button clicked');
+    this.setState((prevState) => {
+      return {
+        count: prevState.count -1
+      }
+    });
   }
 
   handleReset(){
+    this.setState(() => {
+      return {
+        count: 0
+      }
+    });
+
     console.log('Handle Reset ..clicked');
   }
 
