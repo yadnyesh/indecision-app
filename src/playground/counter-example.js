@@ -11,4 +11,12 @@ class Counter extends React.Component {
   }
 }
 
+handleAddOne() {
+  console.log('Handle Add One Clicked...');
+}
+
+handleMinusOne(){
+  console.log('Handle Minus one ...button clicked');
+}
+
 ReactDOM.render(<Counter />, document.getElementById('app'));
