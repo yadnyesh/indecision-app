@@ -8,53 +8,29 @@ function _possibleConstructorReturn(self, call) { if (!self) { throw new Referen
 
 function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
 
-var Counter = function (_React$Component) {
-  _inherits(Counter, _React$Component);
+var VisibilityToggle = function (_React$Component) {
+  _inherits(VisibilityToggle, _React$Component);
 
-  function Counter(props) {
-    _classCallCheck(this, Counter);
+  function VisibilityToggle(props) {
+    _classCallCheck(this, VisibilityToggle);
 
-    var _this = _possibleConstructorReturn(this, (Counter.__proto__ || Object.getPrototypeOf(Counter)).call(this, props));
+    var _this = _possibleConstructorReturn(this, (VisibilityToggle.__proto__ || Object.getPrototypeOf(VisibilityToggle)).call(this, props));
 
-    _this.handleAddOne = _this.handleAddOne.bind(_this);
-    _this.handleMinusOne = _this.handleMinusOne.bind(_this);
-    _this.handleReset = _this.handleReset.bind(_this);
+    _this.toggleText = _this.toggleText.bind(_this);
     _this.state = {
-      count: 0
+      showText: true
     };
     return _this;
   }
 
-  _createClass(Counter, [{
-    key: 'handleAddOne',
-    value: function handleAddOne() {
-      console.log('Handle Add One Clicked...');
+  _createClass(VisibilityToggle, [{
+    key: 'toggleText',
+    value: function toggleText() {
       this.setState(function (prevState) {
         return {
-          count: prevState.count + 1
+          showText: !prevState.showText
         };
       });
-    }
-  }, {
-    key: 'handleMinusOne',
-    value: function handleMinusOne() {
-      console.log('Handle Minus one ...button clicked');
-      this.setState(function (prevState) {
-        return {
-          count: prevState.count - 1
-        };
-      });
-    }
-  }, {
-    key: 'handleReset',
-    value: function handleReset() {
-      this.setState(function () {
-        return {
-          count: 0
-        };
-      });
-
-      console.log('Handle Reset ..clicked');
     }
   }, {
     key: 'render',
@@ -65,29 +41,53 @@ var Counter = function (_React$Component) {
         React.createElement(
           'h1',
           null,
-          'Count: ',
-          this.state.count
+          ' Visibility Toggle '
         ),
         React.createElement(
           'button',
-          { onClick: this.handleAddOne },
-          '+1'
+          { onClick: this.toggleText },
+          this.state.showText ? 'Hide Details' : 'Show Details'
         ),
         React.createElement(
-          'button',
-          { onClick: this.handleMinusOne },
-          '-1'
+          'p',
+          null,
+          ' ',
+          this.state.showText ? 'Hey! You can see some details now' : '',
+          ' '
         ),
-        React.createElement(
-          'button',
-          { onClick: this.handleReset },
-          'Reset'
-        )
+        console.log(this.state.showText)
       );
     }
   }]);
 
-  return Counter;
+  return VisibilityToggle;
 }(React.Component);
 
-ReactDOM.render(React.createElement(Counter, null), document.getElementById('app'));
+ReactDOM.render(React.createElement(VisibilityToggle, null), document.getElementById('app'));
+
+//*****************Old Code*******************
+// const appRoot = document.getElementById('app');
+
+// let showText = true;
+
+// const toggleText = () => {
+//   showText = !showText;
+//   //console.log(showText);
+//   render();
+// }
+
+// const render = () => {
+
+//   const template = (
+//     <div>
+//       <h1>Visibility Toggle</h1>
+//       <button onClick={toggleText}>{showText ? 'Hide Details' : 'Show Details'}</button>
+//       <p> {showText ? 'Hey! You can see some details now' : ''} </p>
+//       {console.log(showText)}
+//     </div>
+//   );
+
+//   ReactDOM.render(template, appRoot);
+// }
+
+// render();
